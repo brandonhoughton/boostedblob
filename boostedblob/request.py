@@ -87,7 +87,7 @@ class Request:
             if config.debug_mode or attempt + 1 >= 3:
                 print(
                     f"[boostedblob] Error when executing request on attempt {attempt + 1}, "
-                    f"sleeping for {backoff:.1f}s before retrying. Status: {error.status}",
+                    f"sleeping for {backoff:.1f}s before retrying. Status: {error}",
                     file=sys.stderr,
                 )
             await asyncio.sleep(backoff)
